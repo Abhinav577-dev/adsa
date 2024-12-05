@@ -35,33 +35,21 @@ void main(){
             printf("\nNode %d is not reachable",i);
 
     }
-    void BFS(int a[20][20],int source,int visited[20],int n)
-    {
-         int queue[20],f,r,u,v;
-         f=0;
-         r=-1;
-         queue[++r]=source;
-         while(f<=r){
-             u=queue[f++];
-             for(v=1;v<=n;v++){
-                 if(a[u][v]==1 && visited[v]==0){
-                     queue[r++]=v;
-                     visited[v]=1;
-		 }
-	     }
-	 }
-
-    }
-	
-    printf("\nSource node: %d",source);
-    for(i=1;i<=n;i++)
-    {
-@@ -43,7 +49,7 @@ void BFS(int a[20][20],int source,int visited[20],int n)
-        {
-            if(a[u][v]==1 && visited[v]==0)
-            { 
-		        queue[++r]=v;
-		queue[++r]=v;
+}
+void BFS(int a[20][20],int source,int visited[20],int n)
+{
+    int queue[20],f,r,u,v;
+    f=0;
+    r=-1;
+    queue[++r]=source;
+    while(f<=r){
+        u=queue[f++];
+        for(v=1;v<=n;v++){
+            if(a[u][v]==1 && visited[v]==0){
+                queue[r++]=v;
                 visited[v]=1;
-            }
-      }
+	    }
+        }
+    }
+}
+	
